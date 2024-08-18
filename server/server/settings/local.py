@@ -1,13 +1,16 @@
 from .base import *
+from dotenv import load_dotenv
 
-SECRET_KEY = 'django-insecure-tg=clar94-(abclw+@)0)p1(z49m+a_(g8!9!7&=ooqy@bpnw1'
+load_dotenv()
+
+SECRET_KEY = os.environ.get('LOCAL_KEY')
 
 ALLOWED_HOSTS = []
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'data.db',
     }
 }
 

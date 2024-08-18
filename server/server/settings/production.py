@@ -1,8 +1,8 @@
 from .base import *
 
-SECRET_KEY = 'django-insecure-tg=clar94-(abclw+@)0)p1(z49m+a_(g8!9!7&=ooqy@bpnw1'
+SECRET_KEY = os.environ.get('PRODUCTION_KEY')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
