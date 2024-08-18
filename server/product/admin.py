@@ -45,7 +45,7 @@ class CartAdmin(ImportExportModelAdmin, admin.ModelAdmin):
 
 @admin.register(Order)
 class OrderAdmin(ImportExportModelAdmin, admin.ModelAdmin):  
-    list_display = ['order_code', 'user', 'status', 'created_at', 'total']
+    list_display = ['order_code', 'user', 'status', 'created_at']
     list_filter = ['status', 'created_at']
     search_fields = ['order_code', 'user__username']
     readonly_fields = ['order_code', 'created_at']
